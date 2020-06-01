@@ -24,6 +24,7 @@
 	(usen conjuntos)
 
 """
+#ALUMNA: ALVAREZ VEGA SOCORRO
 #Coloque 8 requisitos como minimo para ser candidato 
 #ya que representa el 70% de los requisitos
 
