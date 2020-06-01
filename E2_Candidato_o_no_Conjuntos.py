@@ -4,7 +4,6 @@ Created on Mon May 11 18:11:43 2020
 @author: Kokiz
 """
 """
-"""
 	https://www.computrabajo.com.mx/ofertas-de-trabajo/oferta-de-trabajo-de-desarrollador-batch-exp-sistemas-abiertos-en-queretaro-601BC72F6CEBB0F761373E686DCF3405
 	En una empresa solicitan Lic./Ing. en Sistemas, Computación o afín.
 	con los siguientes requisitos:
