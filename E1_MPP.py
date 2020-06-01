@@ -5,6 +5,7 @@ Created on Mon May 11 18:11:43 2020
 @author: Kokiz
 """
 """
+#ALUMNA: ALVAREZ VEGA SOCORRO
 # Modus ponendo ponens
 
 "el modo que, al afirmar, afirma"
