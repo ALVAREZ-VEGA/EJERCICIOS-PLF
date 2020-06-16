@@ -53,17 +53,19 @@ octeto([F|C])  :- r5(F), octeto(C).
 
 % ----------------------- MASCARA DE RED-----------------------------
 
-masRED(MASCARA) :- split_string(MASCARA,".",",",MR), mandar_mascara(MR).
+masRED(MASCARA) :- split_string(MASCARA,".",",",MR), val_masred(MR).
 
-mandar_mascara([F|[]])  :- val_masred(F).
-mandar_mascara([F|C])  :- val_masred(F), mandar_mascara(C).
+mandar_mascara([F|[]])  :- opcion2_mc(F).
+mandar_mascara([F|C])  :- opcion2_mc(F), mandar_mascara(C).
 
-val_masred(MASC) :- string_length(MASC,3),preparar_string(MASC,RS), opcion1_mc(RS);
-                    string_length(MASC,2),preparar_string(MASC,RS), opcion2_mc(RS);
-                    string_length(MASC,1),opcion3_mc(MASC).
+val_masred([F|[]]) :- string_length(F,3),opcion1_mc(F);
+                      string_length(F,1),opcion2_mc(F).
 
-opcion1_mc([F|C]):- F == "2", octeto([F|C]);
-                    F == "1", opcion2_mc([F|C]).
-opcion2_mc([F|[]]):- digito(F).
-opcion2_mc([F|C]):- digito(F), opcion2_mc(C).
-opcion3_mc(MC):- MC == "0".
+val_masred([F|C]) :- string_length(F,3),opcion1_mc(F),val_masred(C);
+                     string_length(F,1),opcion2_mc(F),mandar_mascara(C).
+
+
+opcion1_mc(N):- N == "128"; N == "192"; N == "224"; N == "240";
+                N == "248"; N == "252"; N == "254"; N == "255".
+
+opcion2_mc(MC):- MC == "0".
